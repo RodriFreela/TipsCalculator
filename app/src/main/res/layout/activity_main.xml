@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="415dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_valor_total_mesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header_bg" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:fontFamily="@font/agbalumo"
+        android:text="Tips"
+        android:textColor="@color/secondary_color"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_valor_total_mesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Enter the total amount"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tips" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/digite_valor_mesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_total_mesa"
+        app:startIconDrawable="@drawable/money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_valor_mesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. $ 70.50"
+            android:inputType="numberDecimal"
+            android:maxLength="7" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_num_pessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Number of people"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digite_valor_mesa" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_num_pessoas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_pessoas"
+        app:startIconDrawable="@drawable/people">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_num_pessoas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 5"
+            android:inputType="number"
+            android:maxLength="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_choose_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Choose your tip (not required)"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_num_pessoas" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_percentage_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/til_num_pessoas"
+        app:layout_constraintStart_toStartOf="@+id/til_num_pessoas"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_tip">
+
+       <!-- <RadioButton
+            android:id="@+id/option_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_selector"
+            android:textColor="@drawable/rb_text_color"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:text="0%"
+            android:textStyle="bold" /> -->
+
+        <RadioButton
+            android:id="@+id/option_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_selector"
+            android:textColor="@drawable/rb_text_color"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:buttonTint="@color/primary_color"
+            android:text="5%"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/option_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_selector"
+            android:textColor="@drawable/rb_text_color"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:buttonTint="@color/primary_color"
+            android:text="10%"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:id="@+id/option_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_selector"
+            android:textColor="@drawable/rb_text_color"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:buttonTint="@color/primary_color"
+            android:text="15%"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/option_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_selector"
+            android:textColor="@drawable/rb_text_color"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:buttonTint="@color/primary_color"
+            android:text="20%"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary_color"
+        android:text="Clean"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout3" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary_color"
+        android:text="Done"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout3"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bottom_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="56dp"
+        android:textStyle="bold"
+        android:maxLength="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout3"
+        tools:text="$45,90" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total per person"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
