@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Title">Propina</string>
+    <string name="app_name">Calculadora de propinas</string>
+    <string name="total_amount_label">Introduce valor total</string>
+    <string name="number_of_people_label">Número de personas</string>
+    <string name="choose_tip_label">Elije tu propina (opcional)</string>
+    <string name="btn_clean">Limpiar</string>
+    <string name="btn_done">Calcular</string>
+    <string name="total_per_person_label">Total por persona</string>
+</resources>

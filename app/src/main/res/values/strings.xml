@@ -1,3 +1,10 @@
 <resources>
+    <string name="Title">Tips</string>
     <string name="app_name">Tips Calculator</string>
+    <string name="total_amount_label">Enter the total amount</string>
+    <string name="number_of_people_label">Number of people</string>
+    <string name="choose_tip_label">Choose your tip (not required)</string>
+    <string name="btn_clean">Clean</string>
+    <string name="btn_done">Done</string>
+    <string name="total_per_person_label">Total per person</string>
 </resources>

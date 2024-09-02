@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Title">Gorjeta</string>
+    <string name="app_name">Calculadora de Gorjetas</string>
+    <string name="total_amount_label">Digite o valor total</string>
+    <string name="number_of_people_label">Número de pessoas</string>
+    <string name="choose_tip_label">Escolha sua gorjeta (opcional)</string>
+    <string name="btn_clean">Limpar</string>
+    <string name="btn_done">Calcular</string>
+    <string name="total_per_person_label">Total por pessoa</string>
+</resources>
