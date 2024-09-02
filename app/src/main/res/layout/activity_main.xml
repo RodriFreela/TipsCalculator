@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
@@ -17,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
         app:srcCompat="@drawable/header_bg" />
 
     <TextView
@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16sp"
-        android:fontFamily="@font/agbalumo"
-        android:text="Tips"
+        android:fontFamily="@font/agbalumo_regular_teste"
+        android:text="@string/Title"
         android:textColor="@color/secondary_color"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Enter the total amount"
+        android:text="@string/total_amount_label"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,6 @@
         app:endIconMode="clear_text"
         app:helperText="Required*"
         app:helperTextTextColor="@color/red"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_valor_total_mesa"
@@ -74,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Number of people"
+        android:text="@string/number_of_people_label"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +89,6 @@
         app:endIconMode="clear_text"
         app:helperText="Required*"
         app:helperTextTextColor="@color/red"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_num_pessoas"
@@ -110,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Choose your tip (not required)"
+        android:text="@string/choose_tip_label"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,78 +122,68 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/til_num_pessoas"
-        app:layout_constraintStart_toStartOf="@+id/til_num_pessoas"
+        app:layout_constraintEnd_toEndOf="@+id/btn_done"
+        app:layout_constraintStart_toStartOf="@+id/btn_clean"
         app:layout_constraintTop_toBottomOf="@+id/tv_choose_tip">
-
-       <!-- <RadioButton
-            android:id="@+id/option_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@android:color/transparent"
-            android:background="@drawable/rb_selector"
-            android:textColor="@drawable/rb_text_color"
-            android:elevation="4dp"
-            android:layout_margin="8dp"
-            android:textAlignment="center"
-            android:text="0%"
-            android:textStyle="bold" /> -->
 
         <RadioButton
             android:id="@+id/option_two"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="wrap_content"
-            android:button="@android:color/transparent"
-            android:background="@drawable/rb_selector"
-            android:textColor="@drawable/rb_text_color"
-            android:elevation="4dp"
             android:layout_margin="8dp"
-            android:textAlignment="center"
+            android:background="@drawable/rb_selector"
+            android:button="@android:color/transparent"
             android:buttonTint="@color/primary_color"
+            android:elevation="4dp"
             android:text="5%"
+            android:textAlignment="center"
+            android:textColor="@drawable/rb_text_color"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/option_three"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="wrap_content"
-            android:button="@android:color/transparent"
-            android:background="@drawable/rb_selector"
-            android:textColor="@drawable/rb_text_color"
-            android:elevation="4dp"
             android:layout_margin="8dp"
-            android:textAlignment="center"
+            android:background="@drawable/rb_selector"
+            android:button="@android:color/transparent"
             android:buttonTint="@color/primary_color"
+            android:elevation="4dp"
             android:text="10%"
+            android:textAlignment="center"
+            android:textColor="@drawable/rb_text_color"
+            android:textSize="32sp"
             android:textStyle="bold" />
-
 
         <RadioButton
             android:id="@+id/option_four"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="wrap_content"
-            android:button="@android:color/transparent"
-            android:background="@drawable/rb_selector"
-            android:textColor="@drawable/rb_text_color"
-            android:elevation="4dp"
             android:layout_margin="8dp"
-            android:textAlignment="center"
+            android:background="@drawable/rb_selector"
+            android:button="@android:color/transparent"
             android:buttonTint="@color/primary_color"
+            android:elevation="4dp"
             android:text="15%"
+            android:textAlignment="center"
+            android:textColor="@drawable/rb_text_color"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/option_five"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="wrap_content"
-            android:button="@android:color/transparent"
-            android:background="@drawable/rb_selector"
-            android:textColor="@drawable/rb_text_color"
-            android:elevation="4dp"
             android:layout_margin="8dp"
-            android:textAlignment="center"
+            android:background="@drawable/rb_selector"
+            android:button="@android:color/transparent"
             android:buttonTint="@color/primary_color"
+            android:elevation="4dp"
             android:text="20%"
+            android:textAlignment="center"
+            android:textColor="@drawable/rb_text_color"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
     </RadioGroup>
@@ -210,11 +198,11 @@
 
     <Button
         android:id="@+id/btn_clean"
-        android:layout_marginEnd="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/secondary_color"
-        android:text="Clean"
+        android:text="@string/btn_clean"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -222,11 +210,11 @@
 
     <Button
         android:id="@+id/btn_done"
-        android:layout_marginStart="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:backgroundTint="@color/secondary_color"
-        android:text="Done"
+        android:text="@string/btn_done"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
         app:layout_constraintEnd_toEndOf="@+id/relativeLayout3"
@@ -241,14 +229,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_result_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="56dp"
+        android:textSize="56sp"
         android:textStyle="bold"
         android:maxLength="8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -258,15 +247,15 @@
         tools:text="$45,90" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Total per person"
+        android:text="@string/total_per_person_label"
         android:textColor="@color/white"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout3" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

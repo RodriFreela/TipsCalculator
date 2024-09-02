@@ -74,10 +74,12 @@ class MainActivity : AppCompatActivity() {
                 var totalFinal: Float = totalTemp + tips
 
                 binding.tvResultFinal.text = "$ $totalFinal"
+               // binding.edtResultFinal.text.toString()= "$ $totalFinal"
             }
         }
         binding.btnClean.setOnClickListener{
             binding.tvResultFinal.text = ""
+            //binding.edtResultFinal.text = ""
             binding.tietValorMesa.setText("")
             binding.tietNumPessoas.setText("")
            // binding.optionOne.isChecked = false
