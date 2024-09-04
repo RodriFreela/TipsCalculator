@@ -53,7 +53,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnDone.setOnClickListener {
             val totalTableTemp = binding.tietValorMesa.text
+            println("Total da mesa:" + totalTableTemp)
             val numPessoasTemp = binding.tietNumPessoas.text
+            println("Num de pessoas:" + numPessoasTemp)
 
             if (totalTableTemp?.isEmpty() == true ||
                 numPessoasTemp?.isEmpty() == true
@@ -72,21 +74,22 @@ class MainActivity : AppCompatActivity() {
                 val totalTemp = totalTable / numPessoas
                 val tips = totalTemp * percentage / 100
                 var totalFinal: Float = totalTemp + tips
-
                 binding.tvResultFinal.text = "$ $totalFinal"
-               // binding.edtResultFinal.text.toString()= "$ $totalFinal"
+
+                // binding.edtResultFinal.text.toString()= "$ $totalFinal"
             }
         }
-        binding.btnClean.setOnClickListener{
+        binding.btnClean.setOnClickListener {
             binding.tvResultFinal.text = ""
             //binding.edtResultFinal.text = ""
             binding.tietValorMesa.setText("")
             binding.tietNumPessoas.setText("")
-           // binding.optionOne.isChecked = false
+            // binding.optionOne.isChecked = false
             binding.optionTwo.isChecked = false
             binding.optionThree.isChecked = false
             binding.optionFour.isChecked = false
             binding.optionFive.isChecked = false
+            percentage = 0
         }
     }
 }
